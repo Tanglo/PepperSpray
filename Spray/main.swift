@@ -8,6 +8,11 @@
 
 import Foundation
 
-print("sprayed")
+let arguments = NSProcessInfo.processInfo().arguments
+//print("\(arguments.count) arguments: \(arguments)")
+if arguments.count < 2 || arguments[1] == "-h"{
+    PSHelp.printHelp()
+}
+
 
 
