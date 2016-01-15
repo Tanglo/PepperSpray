@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E541565C1C488B510007FFEE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E541565B1C488B510007FFEE /* main.swift */; };
+		E54156621C488D830007FFEE /* spray in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5EEB1A31C48892D00179589 /* spray */; };
 		E5EEB1A71C48892D00179589 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EEB1A61C48892D00179589 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E5EEB1A11C48892D00179589 /* CopyFiles */ = {
+		E54156571C488B510007FFEE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -20,14 +22,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		E5EEB1A11C48892D00179589 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /Users/l.walsh/Desktop/Test;
+			dstSubfolderSpec = 0;
+			files = (
+				E54156621C488D830007FFEE /* spray in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E5EEB1A31C48892D00179589 /* PepperSpray */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PepperSpray; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5EEB1A61C48892D00179589 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E54156591C488B510007FFEE /* wash */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = wash; sourceTree = BUILT_PRODUCTS_DIR; };
+		E541565B1C488B510007FFEE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = main.swift; path = ../Wash/main.swift; sourceTree = "<group>"; };
+		E5EEB1A31C48892D00179589 /* spray */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = spray; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5EEB1A61C48892D00179589 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = main.swift; path = ../Spray/main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E54156561C488B510007FFEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5EEB1A01C48892D00179589 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -38,10 +59,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E541565A1C488B510007FFEE /* Wash */ = {
+			isa = PBXGroup;
+			children = (
+				E541565B1C488B510007FFEE /* main.swift */,
+			);
+			name = Wash;
+			path = wash;
+			sourceTree = "<group>";
+		};
 		E5EEB19A1C48892D00179589 = {
 			isa = PBXGroup;
 			children = (
-				E5EEB1A51C48892D00179589 /* PepperSpray */,
+				E5EEB1A51C48892D00179589 /* Spray */,
+				E541565A1C488B510007FFEE /* Wash */,
 				E5EEB1A41C48892D00179589 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,27 +80,48 @@
 		E5EEB1A41C48892D00179589 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E5EEB1A31C48892D00179589 /* PepperSpray */,
+				E5EEB1A31C48892D00179589 /* spray */,
+				E54156591C488B510007FFEE /* wash */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E5EEB1A51C48892D00179589 /* PepperSpray */ = {
+		E5EEB1A51C48892D00179589 /* Spray */ = {
 			isa = PBXGroup;
 			children = (
 				E5EEB1A61C48892D00179589 /* main.swift */,
 			);
+			name = Spray;
 			path = PepperSpray;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E5EEB1A21C48892D00179589 /* PepperSpray */ = {
+		E54156581C488B510007FFEE /* wash */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5EEB1AA1C48892D00179589 /* Build configuration list for PBXNativeTarget "PepperSpray" */;
+			buildConfigurationList = E541565D1C488B510007FFEE /* Build configuration list for PBXNativeTarget "wash" */;
+			buildPhases = (
+				E54156551C488B510007FFEE /* Sources */,
+				E54156641C488E5B0007FFEE /* ShellScript */,
+				E54156561C488B510007FFEE /* Frameworks */,
+				E54156571C488B510007FFEE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wash;
+			productName = wash;
+			productReference = E54156591C488B510007FFEE /* wash */;
+			productType = "com.apple.product-type.tool";
+		};
+		E5EEB1A21C48892D00179589 /* spray */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5EEB1AA1C48892D00179589 /* Build configuration list for PBXNativeTarget "spray" */;
 			buildPhases = (
 				E5EEB19F1C48892D00179589 /* Sources */,
+				E54156631C488E250007FFEE /* ShellScript */,
 				E5EEB1A01C48892D00179589 /* Frameworks */,
 				E5EEB1A11C48892D00179589 /* CopyFiles */,
 			);
@@ -77,9 +129,9 @@
 			);
 			dependencies = (
 			);
-			name = PepperSpray;
+			name = spray;
 			productName = PepperSpray;
-			productReference = E5EEB1A31C48892D00179589 /* PepperSpray */;
+			productReference = E5EEB1A31C48892D00179589 /* spray */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -92,6 +144,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Lee David Walsh";
 				TargetAttributes = {
+					E54156581C488B510007FFEE = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					E5EEB1A21C48892D00179589 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -109,12 +164,50 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E5EEB1A21C48892D00179589 /* PepperSpray */,
+				E5EEB1A21C48892D00179589 /* spray */,
+				E54156581C488B510007FFEE /* wash */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E54156631C488E250007FFEE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/tools/incBuildNum.sh \"${PROJECT_DIR}/${INFOPLIST_FILE}\" \"${PROJECT_DIR}/Spray\"";
+		};
+		E54156641C488E5B0007FFEE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/tools/incBuildNum.sh \"${PROJECT_DIR}/${INFOPLIST_FILE}\" \"${PROJECT_DIR}/Wash\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		E54156551C488B510007FFEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E541565C1C488B510007FFEE /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5EEB19F1C48892D00179589 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -126,6 +219,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		E541565E1C488B510007FFEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E541565F1C488B510007FFEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		E5EEB1A81C48892D00179589 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -223,6 +330,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E541565D1C488B510007FFEE /* Build configuration list for PBXNativeTarget "wash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E541565E1C488B510007FFEE /* Debug */,
+				E541565F1C488B510007FFEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		E5EEB19E1C48892D00179589 /* Build configuration list for PBXProject "PepperSpray" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -232,13 +347,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5EEB1AA1C48892D00179589 /* Build configuration list for PBXNativeTarget "PepperSpray" */ = {
+		E5EEB1AA1C48892D00179589 /* Build configuration list for PBXNativeTarget "spray" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5EEB1AB1C48892D00179589 /* Debug */,
 				E5EEB1AC1C48892D00179589 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

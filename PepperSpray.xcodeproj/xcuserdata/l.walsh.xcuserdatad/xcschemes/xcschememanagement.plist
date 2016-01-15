@@ -4,14 +4,24 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>PepperSpray.xcscheme</key>
+		<key>Spray.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Wash.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>E54156581C488B510007FFEE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E5EEB1A21C48892D00179589</key>
 		<dict>
 			<key>primary</key>
