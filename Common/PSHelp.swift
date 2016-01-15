@@ -11,10 +11,10 @@ import Foundation
 class PSHelp{
     
     class func printHelp(){
-        print("usage: spray <key>")
+        print("usage: spray [-flags] <key>")
         print("  <key>\tDeblinding key will be created at this path")
         print("")
-        print("usage: wash <key>")
+        print("usage: wash [-flags] <key>")
         print("  <key>\tThe deblinding key to wash with")
     }
 }

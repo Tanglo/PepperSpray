@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E541565C1C488B510007FFEE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E541565B1C488B510007FFEE /* main.swift */; };
 		E54156621C488D830007FFEE /* pspray in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5EEB1A31C48892D00179589 /* pspray */; };
+		E558FA9C1C48C44C00F74414 /* PSFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E558FA9B1C48C44C00F74414 /* PSFlags.swift */; };
+		E558FA9D1C48D72500F74414 /* PSFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E558FA9B1C48C44C00F74414 /* PSFlags.swift */; };
 		E5D7E6601C4890BF00BDD08C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7E65F1C4890BF00BDD08C /* main.swift */; };
 		E5D7E6621C48922300BDD08C /* PSHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7E6611C48922300BDD08C /* PSHelp.swift */; };
 		E5D7E6641C4897BD00BDD08C /* PSHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7E6611C48922300BDD08C /* PSHelp.swift */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		E54156591C488B510007FFEE /* wash */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = wash; sourceTree = BUILT_PRODUCTS_DIR; };
 		E541565B1C488B510007FFEE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = main.swift; path = ../Wash/main.swift; sourceTree = "<group>"; };
+		E558FA9B1C48C44C00F74414 /* PSFlags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSFlags.swift; sourceTree = "<group>"; };
+		E558FA9E1C48D82500F74414 /* To do.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = "To do.rtf"; path = "Spray/To do.rtf"; sourceTree = "<group>"; };
 		E5D7E65F1C4890BF00BDD08C /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		E5D7E6611C48922300BDD08C /* PSHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSHelp.swift; sourceTree = "<group>"; };
 		E5EEB1A31C48892D00179589 /* pspray */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pspray; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				E5D7E6611C48922300BDD08C /* PSHelp.swift */,
+				E558FA9B1C48C44C00F74414 /* PSFlags.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 		E5EEB19A1C48892D00179589 = {
 			isa = PBXGroup;
 			children = (
+				E558FA9E1C48D82500F74414 /* To do.rtf */,
 				E5D7E6631C48927500BDD08C /* Common */,
 				E5EEB1A51C48892D00179589 /* Spray */,
 				E541565A1C488B510007FFEE /* Wash */,
@@ -219,6 +225,7 @@
 			files = (
 				E541565C1C488B510007FFEE /* main.swift in Sources */,
 				E5D7E6641C4897BD00BDD08C /* PSHelp.swift in Sources */,
+				E558FA9D1C48D72500F74414 /* PSFlags.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,8 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5D7E6621C48922300BDD08C /* PSHelp.swift in Sources */,
 				E5D7E6601C4890BF00BDD08C /* main.swift in Sources */,
+				E5D7E6621C48922300BDD08C /* PSHelp.swift in Sources */,
+				E558FA9C1C48C44C00F74414 /* PSFlags.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
