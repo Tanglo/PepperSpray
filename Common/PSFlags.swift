@@ -31,4 +31,13 @@ class PSFlags: CustomStringConvertible {
             }
         }
     }
+    
+    func contains(flag: Character) -> Bool{
+        for currentFlag in flags{
+            if currentFlag == flag{
+                return true
+            }
+        }
+        return false
+    }
 }

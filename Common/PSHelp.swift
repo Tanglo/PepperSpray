@@ -13,6 +13,7 @@ class PSHelp{
     class func printHelp(){
         print("usage: spray [-flags] <key>")
         print("  <key>\tDeblinding key will be created at this path")
+        print("  p\tpermanent: no key file is generated")
         print("")
         print("usage: wash [-flags] <key>")
         print("  <key>\tThe deblinding key to wash with")
