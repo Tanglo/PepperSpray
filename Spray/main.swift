@@ -9,47 +9,50 @@
 import Foundation
 
 let arguments = NSProcessInfo.processInfo().arguments
-if arguments.count < 2 || arguments[1] == "-h"{
+let workingDirectoryString = String(NSString(string: arguments[0]).stringByDeletingLastPathComponent)
+var nextArg = 1
+if (arguments.count > nextArg) && (arguments[1] == "-h"){
     PSHelp.printHelp()
     exit(0)
 } else {
-    var keyPathArg = 1
+    //Get flags
     var flags = PSFlags("")
-    let index = arguments[1].startIndex
-    if arguments[1][index] == "-"{
-        flags = PSFlags(arguments[1])
-        keyPathArg++
+    if arguments.count > nextArg{
+        let index = arguments[1].startIndex
+        if arguments[1][index] == "-"{
+            flags = PSFlags(arguments[nextArg])
+            nextArg++
+        }
     }
     let createKey = !flags.contains("p")
-    var keyPath = ""
-    if createKey{
-        if (arguments.count < keyPathArg+1){
-            keyPath = "./key.csv"
-        } else{
-            keyPath = arguments[keyPathArg]
-        }
-    } else {
-        keyPathArg--
-    }
-    let overwriteOriginals = flags.contains("o")
-    var newLocation = ""
-    if !overwriteOriginals{
-        if (arguments.count > keyPathArg+1){
-            newLocation = arguments[keyPathArg+1]
+    var keyPath = workingDirectoryString
+    if (arguments.count > nextArg){
+        let index = arguments[1].startIndex
+        if !(arguments[nextArg][index] == "-"){
+            keyPath = arguments[nextArg]
+            nextArg++
         }
     }
-    
-    print("Main: createKey - \(createKey)")
-    print("Main: overwriteOriginals - \(overwriteOriginals)")
-    print("Main: keyPath - \(keyPath)")
-    print("Main: newLocation - \(newLocation)")
+    var sourcePath = workingDirectoryString
+    if (arguments.count > nextArg+1) && (arguments[nextArg] == "-s"){
+        sourcePath = arguments[nextArg+1]
+        nextArg += 2
+    }
+    let overwriteFiles = flags.contains("o")
+    var destinationPath = workingDirectoryString
+    if (arguments.count > nextArg+1) && (arguments[nextArg] == "-d"){
+        destinationPath = arguments[nextArg+1]
+        nextArg += 2
+    }
+    print("Main: flags - \(flags)")
+    print("Main: key? - \(createKey), keyPath - \(keyPath)")
+    print("Main: sourcePath - \(sourcePath)")
+    print("Main: overwrite? - \(overwriteFiles), destinationPath - \(destinationPath)")
+
     //Ready to go
     var filenames = [NSURL]()
-    let workingDirectoryString = NSString(string: arguments[0]).stringByDeletingLastPathComponent
-    print("\(workingDirectoryString)")
-    let workingDirectoryURL = NSURL(fileURLWithPath: workingDirectoryString, isDirectory: true)
     do{
-        let filenames = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(NSURL(fileURLWithPath: arguments[0], isDirectory: true), includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions.SkipsHiddenFiles)
+        filenames = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(NSURL(fileURLWithPath: sourcePath, isDirectory: true), includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions.SkipsHiddenFiles)
     } catch {
         let nsError = (error as NSError)
         print("\(nsError.localizedDescription)")
