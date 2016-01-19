@@ -36,6 +36,12 @@ if (arguments.count > nextArg) && (arguments[1] == "-h"){
     var sourcePath = workingDirectoryString
     if (arguments.count > nextArg+1) && (arguments[nextArg] == "-s"){
         sourcePath = arguments[nextArg+1]
+        var isDirectory: ObjCBool = true
+        NSFileManager.defaultManager().fileExistsAtPath(sourcePath, isDirectory: &isDirectory)
+        if !isDirectory{
+            print("Error: <source> is not a directory")
+            exit(-1407)     //code for getting a file instead of an folder
+        }
         nextArg += 2
     }
     let overwriteFiles = flags.contains("o")
@@ -58,6 +64,6 @@ if (arguments.count > nextArg) && (arguments[1] == "-h"){
         print("\(nsError.localizedDescription)")
         exit(Int32(nsError.code))
     }
-    print("\(filenames)")
+//    print("\(filenames)")
 }
 
